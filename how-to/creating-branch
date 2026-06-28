@@ -1,0 +1,116 @@
+Step 1: Gumawa ng bagong branch
+  git checkout -b feature/login
+  
+  O gamit ang switch:
+  
+  git switch -c feature/login
+----------------------------------------------------------------------------------
+  
+Step 2: Mag-develop ng feature
+  Magdagdag o mag-edit ng code.
+  I-save ang lahat ng pagbabago.
+----------------------------------------------------------------------------------
+  
+Step 3: Tingnan ang mga nabago
+  git status
+  
+  Makikita rito kung aling mga file ang nabago.
+----------------------------------------------------------------------------------
+  
+Step 4: I-stage ang mga pagbabago
+  Kung lahat ng files:
+  
+  git add .
+  
+  Kung isang file lang:
+  
+  git add <filename>
+----------------------------------------------------------------------------------
+  
+Step 5: Mag-commit ng changes
+  git commit -m "Add login feature"
+  
+  Maglagay ng malinaw at maikling commit message na naglalarawan ng ginawa.
+----------------------------------------------------------------------------------
+  
+Step 6: I-push ang branch sa remote repository
+  git push origin feature/login
+----------------------------------------------------------------------------------
+  
+Step 7: Gumawa ng Pull Request (PR)
+  Pumunta sa GitHub.
+  Piliin ang branch na feature/login.
+  Gumawa ng Pull Request papunta sa main o develop.
+  Maglagay ng title at description ng iyong changes.
+----------------------------------------------------------------------------------
+  
+Step 8: Hintayin ang code review
+  Magre-review ang team o maintainer.
+  Kung may feedback, gawin ang mga kinakailangang pagbabago.
+  Ulitin ang Step 3 hanggang Step 6 para ma-update ang PR.
+----------------------------------------------------------------------------------
+  
+Step 9: Resolve merge conflicts (kung mayroon)
+  Kung may conflict:
+  
+  Buksan ang conflicted files.
+  Ayusin ang conflict.
+  I-save ang file.
+  
+  I-stage ang changes:
+  
+  git add .
+  
+  Tapusin ang merge o rebase:
+  
+  git commit
+  
+  o
+  
+  git rebase --continue
+----------------------------------------------------------------------------------
+  
+Step 10: I-merge ang Pull Request
+  Kapag:
+  
+  ✅ Approved ang review
+  ✅ Walang conflicts
+  ✅ Passed ang checks
+  
+  I-click ang Merge Pull Request sa GitHub.
+----------------------------------------------------------------------------------
+  
+Step 11: Burahin ang feature branch (optional)
+  Local:
+  
+  git branch -d feature/login
+  
+  Remote:
+  
+  git push origin --delete feature/login
+----------------------------------------------------------------------------------
+  
+Workflow Overview
+Step 1  Create Branch
+      ↓
+Step 2  Develop Code
+      ↓
+Step 3  git status
+      ↓
+Step 4  git add
+      ↓
+Step 5  git commit
+      ↓
+Step 6  git push
+      ↓
+Step 7  Create Pull Request
+      ↓
+Step 8  Code Review
+      ↓
+Step 9  Resolve Conflicts (kung mayroon)
+      ↓
+Step 10 Merge Pull Request
+      ↓
+Step 11 Delete Branch (optional)
+
+Ang workflow na ito ay madaling sundan at karaniwang ginagamit sa mga proyekto na gumagamit ng Git at GitHub.
