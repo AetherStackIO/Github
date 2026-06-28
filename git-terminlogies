@@ -1,4 +1,4 @@
-GIT
+## GIT
  
 Isipin mo na ang Git ay parang save system ng isang video game, pero para sa code.
 Kapag gumagawa ka ng project, gusto mo:
@@ -8,7 +8,7 @@ Kapag gumagawa ka ng project, gusto mo:
 * Hindi mawalan ng code.
 
 —————————————————————————————————————————————————————————————————————————————————————————————————
-Basic Git Terminologies
+# Basic Git Terminologies
 term: Repository (Repo) description: Isang project na tina-track ni Git. Naglalaman ito ng source code, commit history, branches, at iba pang Git metadata.
 
 term: Local Repository description: Ang kopya ng repository na nasa iyong computer.
