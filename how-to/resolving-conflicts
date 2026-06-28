@@ -1,0 +1,132 @@
+Step 1: Tingnan ang status ng repository
+  git status
+  
+  Makikita mo kung aling mga file ang may conflict.
+  
+  Halimbawa:
+  
+  both modified: app.js
+  both modified: README.md
+----------------------------------------------------------------------------------
+  
+Step 2: Buksan ang conflicted file
+  Makikita mo ang ganitong markers:
+  
+  <<<<<<< HEAD
+  Your changes
+  =======
+  Changes from the other branch
+  >>>>>>> feature-branch
+  <<<<<<< HEAD → Ito ang changes sa current branch.
+  ======= → Separator.
+  >>>>>>> feature-branch → Ito ang changes mula sa kabilang branch.
+----------------------------------------------------------------------------------
+  
+Step 3: I-resolve ang conflict
+  Piliin kung alin ang gusto mong itira o pagsamahin ang dalawang changes.
+  
+  Halimbawa:
+  
+  Before:
+  
+  <<<<<<< HEAD
+  console.log("Version A");
+  =======
+  console.log("Version B");
+  >>>>>>> feature-branch
+  
+  After:
+  
+  console.log("Version A");
+  console.log("Version B");
+  
+  O:
+  
+  console.log("Version B");
+  
+  Pagkatapos, tanggalin ang lahat ng conflict markers (<<<<<<<, =======, >>>>>>>).
+----------------------------------------------------------------------------------
+  
+Step 4: I-save ang file
+  Siguraduhing na-save ang mga pagbabago.
+----------------------------------------------------------------------------------
+  
+Step 5: I-stage ang resolved file
+  Kung isang file lang:
+  
+  git add app.js
+  
+  Kung lahat ng resolved files:
+  
+  git add .
+----------------------------------------------------------------------------------
+  
+Step 6: I-check ulit ang status
+  git status
+  
+  Kung wala nang "unmerged paths", handa ka nang tapusin ang merge.
+----------------------------------------------------------------------------------
+  
+Step 7: I-complete ang merge
+  Kung merge ang ginagawa mo:
+  
+  git commit
+  
+  Magbubukas ang default commit message. I-save at isara ito, o maglagay ng sarili mong message:
+  
+  git commit -m "Resolve merge conflict"
+  ----------------------------------------------------------------------------------
+  
+Step 8: I-push ang changes
+  git push origin main
+  
+  Palitan ang main kung iba ang pangalan ng branch mo.
+  
+  Buod ng Commands
+  git status
+  # Resolve conflicts manually
+  git add .
+  git commit -m "Resolve merge conflict"
+  git push origin main
+----------------------------------------------------------------------------------
+Visual Flow
+Start
+  │
+  ▼
+git pull / git merge
+  │
+  ▼
+May conflict?
+  │
+  ├── No → Tapos
+  │
+  └── Yes
+        │
+        ▼
+   git status
+        │
+        ▼
+   Buksan ang conflicted file
+        │
+        ▼
+   Ayusin ang conflict at alisin ang markers
+        │
+        ▼
+   Save
+        │
+        ▼
+   git add .
+        │
+        ▼
+   git status
+        │
+        ▼
+   git commit
+        │
+        ▼
+   git push
+        │
+        ▼
+      Done
+
+Kung ang conflict ay nangyari habang git pull, git merge, o git rebase, may kaunting pagkakaiba sa huling hakbang. Sabihin mo kung alin ang sitwasyon mo at ipapakita ko ang eksaktong workflow.
