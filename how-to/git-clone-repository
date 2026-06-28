@@ -1,0 +1,103 @@
+Step 1: Kunin ang Repository URL
+  Sa GitHub repository:
+  
+  Click Code
+  Piliin ang HTTPS o SSH
+  Kopyahin ang URL
+  
+  Example:
+  
+  https://github.com/username/my-project.git
+----------------------------------------------------------------------------------
+  
+Step 2: Pumunta sa Location Kung Saan Mo Gustong I-save
+  Halimbawa:
+  
+  cd ~/Projects
+  
+  Explanation:
+  
+  Dito ilalagay ni Git ang cloned repository.
+----------------------------------------------------------------------------------
+  
+Step 3: I-Clone ang Repository
+  git clone https://github.com/username/my-project.git
+  
+  Example Output:
+  
+  Cloning into 'my-project'...
+  remote: Enumerating objects...
+  Receiving objects: 100%
+  
+  Explanation:
+  
+  Ida-download lahat ng files.
+  Kasama ang buong commit history.
+  Automatic nang naka-connect sa remote repository.
+----------------------------------------------------------------------------------
+  
+Step 4: Pumasok sa Repository Folder
+  cd my-project
+----------------------------------------------------------------------------------
+  
+Step 5: Verify ang Remote Connection
+  git remote -v
+  
+  Example Output:
+  
+  origin  https://github.com/username/my-project.git (fetch)
+  origin  https://github.com/username/my-project.git (push)
+  
+  Explanation:
+  
+  Nakikita mo kung saan naka-link ang local repository.
+----------------------------------------------------------------------------------
+  
+Step 6: Tingnan ang Current Branch
+  git branch
+  
+  Output:
+  
+  * main
+----------------------------------------------------------------------------------
+  
+Step 7: Kunin ang Latest Changes
+  Kapag may bagong commits sa GitHub:
+  
+  git pull
+  
+  Explanation:
+  
+  Dina-download at ina-apply ang latest changes mula sa remote repository.
+  Typical Workflow After Cloning
+  git clone https://github.com/username/my-project.git
+  
+  cd my-project
+  
+  # gumawa ng changes
+  
+  git add .
+  git commit -m "Added feature"
+  
+  git push
+  Complete Clone Procedure
+  1. Copy repository URL from GitHub
+  2. Open terminal
+  3. cd <target-folder>
+  4. git clone <repository-url>
+  5. cd <repository-name>
+  6. git remote -v
+  7. Start working
+  8. git pull (get latest changes)
+  9. git add .
+  10. git commit -m "message"
+  11. git push
+  Difference: git init vs git clone
+  Command	Purpose
+  git init	Gumawa ng bagong local repository mula sa scratch
+  git clone	Kumuha ng existing repository mula sa GitHub/GitLab at gumawa ng local copy
+  
+  Rule of thumb:
+  
+  Bagong project → git init
+  Existing project sa GitHub → git clone ✅
