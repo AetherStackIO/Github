@@ -9,13 +9,17 @@ Kapag gumagawa ka ng project, gusto mo:
 
 —————————————————————————————————————————————————————————————————————————————————————————————————
 # Basic Git Terminologies
-term: Repository (Repo) description: Isang project na tina-track ni Git. Naglalaman ito ng source code, commit history, branches, at iba pang Git metadata.
+term: Repository (Repo) 
+description: Isang project na tina-track ni Git. Naglalaman ito ng source code, commit history, branches, at iba pang Git metadata.
 
-term: Local Repository description: Ang kopya ng repository na nasa iyong computer.
+term: Local Repository 
+description: Ang kopya ng repository na nasa iyong computer.
 
-term: Remote Repository description: Repository na naka-host sa server tulad ng GitHub, GitLab, o Bitbucket.
+term: Remote Repository 
+description: Repository na naka-host sa server tulad ng GitHub, GitLab, o Bitbucket.
 
-term: Commit description: Isang snapshot ng project sa isang partikular na oras. Ito ang paraan ni Git para i-save ang history ng changes.
+term: Commit 
+description: Isang snapshot ng project sa isang partikular na oras. Ito ang paraan ni Git para i-save ang history ng changes.
 
 term: Commit Hash description: Unique identifier ng isang commit. Halimbawa:
 
@@ -23,27 +27,38 @@ a1b2c3d4
 
 Ginagamit ito para i-reference ang specific commits.
 
-term: Branch description: Isang hiwalay na linya ng development. Karaniwang ginagamit para gumawa ng bagong feature nang hindi naaapektuhan ang main branch.
+term: Branch 
+description: Isang hiwalay na linya ng development. Karaniwang ginagamit para gumawa ng bagong feature nang hindi naaapektuhan ang main branch.
 
-term: Main Branch description: Ang pangunahing branch ng project. Madalas itong tinatawag na main.
+term: Main Branch 
+description: Ang pangunahing branch ng project. Madalas itong tinatawag na main.
 
-term: Checkout / Switch description: Paglipat mula sa isang branch papunta sa ibang branch.
+term: Checkout / Switch 
+description: Paglipat mula sa isang branch papunta sa ibang branch.
 
-term: Merge description: Proseso ng pagsasama ng changes mula sa isang branch papunta sa isa pang branch.
+term: Merge 
+description: Proseso ng pagsasama ng changes mula sa isang branch papunta sa isa pang branch.
 
-term: Merge Conflict description: Nangyayari kapag magkasalungat ang changes sa parehong bahagi ng file at hindi alam ni Git kung alin ang dapat gamitin.
+term: Merge Conflict 
+description: Nangyayari kapag magkasalungat ang changes sa parehong bahagi ng file at hindi alam ni Git kung alin ang dapat gamitin.
 
-term: Clone description: Pagkuha ng buong kopya ng remote repository papunta sa local machine.
+term: Clone 
+description: Pagkuha ng buong kopya ng remote repository papunta sa local machine.
 
-term: Pull description: Pagkuha at pag-merge ng latest changes mula sa remote repository.
+term: Pull 
+description: Pagkuha at pag-merge ng latest changes mula sa remote repository.
 
-term: Push description: Pag-upload ng local commits papunta sa remote repository.
+term: Push 
+description: Pag-upload ng local commits papunta sa remote repository.
 
-term: Fetch description: Pagkuha ng latest changes mula sa remote repository nang hindi pa mina-merge sa current branch.
+term: Fetch 
+description: Pagkuha ng latest changes mula sa remote repository nang hindi pa mina-merge sa current branch.
 
-term: Working Directory description: Ang aktwal na files at folders na kasalukuyan mong ine-edit sa project.
+term: Working Directory 
+description: Ang aktwal na files at folders na kasalukuyan mong ine-edit sa project.
 
-term: Staging Area (Index) description: Temporary area kung saan inilalagay ang mga files bago gumawa ng commit.
+term: Staging Area (Index) 
+description: Temporary area kung saan inilalagay ang mga files bago gumawa ng commit.
 Flow:
 
 Working Directory
@@ -53,42 +68,54 @@ Working Directory
       Commit
 
 
-term: Tracked File description: File na kasalukuyang mino-monitor ni Git.
+term: Tracked File 
+description: File na kasalukuyang mino-monitor ni Git.
 
-term: Untracked File description: File na hindi pa alam o hindi pa mina-monitor ni Git.
+term: Untracked File 
+description: File na hindi pa alam o hindi pa mina-monitor ni Git.
 
-term: Modified File description: File na nabago pagkatapos ng huling commit.
+term: Modified File 
+description: File na nabago pagkatapos ng huling commit.
 
-term: Staged File description: File na na-add na gamit ang git add at handa nang i-commit.
+term: Staged File 
+description: File na na-add na gamit ang git add at handa nang i-commit.
 
-term: HEAD description: Pointer na tumutukoy sa kasalukuyang branch o commit na iyong ginagamit.
+term: HEAD 
+description: Pointer na tumutukoy sa kasalukuyang branch o commit na iyong ginagamit.
 Halimbawa:
 
 HEAD → main
 
 
-term: Origin description: Default na pangalan ng remote repository.
+term: Origin 
+description: Default na pangalan ng remote repository.
 Halimbawa:
 
 git remote add origin https://github.com/user/project.git
 
 
-term: Upstream Branch description: Branch sa remote repository na konektado sa local branch para sa push at pull operations.
+term: Upstream Branch 
+description: Branch sa remote repository na konektado sa local branch para sa push at pull operations.
 
-term: Stash description: Temporary storage para sa uncommitted changes na gusto mong itabi muna.
+term: Stash 
+description: Temporary storage para sa uncommitted changes na gusto mong itabi muna.
 
-term: Revert description: Pag-undo ng isang commit sa pamamagitan ng paggawa ng bagong commit.
+term: Revert 
+description: Pag-undo ng isang commit sa pamamagitan ng paggawa ng bagong commit.
 
-term: Reset description: Paglipat ng branch pointer sa ibang commit. Maaari rin nitong alisin ang commits o changes depende sa mode (soft, mixed, hard).
+term: Reset 
+description: Paglipat ng branch pointer sa ibang commit. Maaari rin nitong alisin ang commits o changes depende sa mode (soft, mixed, hard).
 
-term: Tag description: Label na inilalagay sa specific commit, karaniwang ginagamit para sa releases.
+term: Tag 
+description: Label na inilalagay sa specific commit, karaniwang ginagamit para sa releases.
 Halimbawa:
 
 v1.0.0
 v2.0.0
 
 
-term: Fork description: Sariling kopya ng repository sa iyong account. Karaniwang ginagamit sa open-source projects para makapag-contribute nang hindi direktang binabago ang original repository.
+term: Fork 
+description: Sariling kopya ng repository sa iyong account. Karaniwang ginagamit sa open-source projects para makapag-contribute nang hindi direktang binabago ang original repository.
 
 Simplified Git Workflow
 
