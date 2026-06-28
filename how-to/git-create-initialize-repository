@@ -1,0 +1,172 @@
+Step 1: Gumawa ng Project Folder
+
+  Mag-create ng folder para sa project mo.
+  
+  mkdir my-project
+  cd my-project
+  
+  Explanation:
+  
+  mkdir = gumawa ng folder
+  cd = pumasok sa folder
+----------------------------------------------------------------------------------
+  
+Step 2: I-Initialize ang Git Repository
+
+  Sa loob ng project folder, patakbuhin:
+  
+  git init
+  
+  Explanation:
+  
+  Lumilikha ito ng hidden .git folder.
+  Dito naka-store ang history, commits, branches, at configuration ng repository.
+  
+  Verify:
+  
+  ls -la
+  
+  Makikita mo ang .git folder.
+----------------------------------------------------------------------------------
+  
+Step 3: Gumawa ng File
+  
+  Halimbawa:
+  
+  touch README.md
+  
+  O kaya lagyan agad ng content:
+  
+  echo "# My Project" > README.md
+----------------------------------------------------------------------------------
+  
+Step 4: Tingnan ang Repository Status
+  git status
+  
+  Output:
+  
+  Untracked files:
+    README.md
+  
+  Explanation:
+  
+  Nakita ni Git ang file.
+  Hindi pa ito tracked.
+----------------------------------------------------------------------------------
+  
+Step 5: I-Add ang Files sa Staging Area
+  Single file:
+  
+  git add README.md
+  
+  Lahat ng files:
+  
+  git add .
+  
+  Explanation:
+  
+  Inihahanda ang files para maisama sa susunod na commit.
+----------------------------------------------------------------------------------
+  
+Step 6: Gumawa ng Unang Commit
+  git commit -m "Initial commit"
+  
+  Explanation:
+  
+  Gumagawa ng snapshot ng project.
+  Ang message ay nagsasabi kung ano ang pagbabago.
+----------------------------------------------------------------------------------
+  
+Step 7: Tingnan ang Commit History
+  git log
+  
+  Simplified view:
+  
+  git log --oneline
+  
+  Example Output:
+  
+  a1b2c3d Initial commit
+----------------------------------------------------------------------------------
+  
+Step 8: Gumawa ng GitHub Repository
+  Pumunta sa:
+  
+  GitHub
+  
+  Click New Repository
+  Ilagay ang repository name
+  Click Create Repository
+----------------------------------------------------------------------------------
+  
+Step 9: Ikonekta ang Local Repository sa GitHub
+  Kopyahin ang repository URL.
+  
+  Halimbawa:
+  
+  git remote add origin https://github.com/username/my-project.git
+  
+  Verify:
+  
+  git remote -v
+----------------------------------------------------------------------------------
+  
+Step 10: I-Push ang Code sa GitHub
+  Kung first push:
+  
+  git branch -M main
+  git push -u origin main
+  
+  Explanation:
+  
+  git branch -M main = rename current branch to main
+  git push = upload commits sa GitHub
+  -u = set default upstream branch
+----------------------------------------------------------------------------------
+  
+Step 11: Verify sa GitHub
+  Refresh ang GitHub repository page.
+  
+  Makikita mo na ang:
+  
+  README.md
+  Commit history
+  Repository files
+  Complete Workflow
+  mkdir my-project
+  cd my-project
+  
+  git init
+  
+  echo "# My Project" > README.md
+  
+  git add .
+  git commit -m "Initial commit"
+  
+  git remote add origin https://github.com/username/my-project.git
+  
+  git branch -M main
+  git push -u origin main
+  Daily Workflow After Initial Setup
+  
+  Kapag may bagong changes:
+  
+  git status
+  
+  git add .
+  
+  git commit -m "Add new feature"
+  
+  git push
+----------------------------------------------------------------------------------
+  
+Quick Summary
+  1. Create folder
+  2. git init
+  3. Create/Edit files
+  4. git status
+  5. git add .
+  6. git commit -m "message"
+  7. git remote add origin <url>
+  8. git push -u origin main
+  9. Repeat: add → commit → push
