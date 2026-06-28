@@ -1,0 +1,220 @@
+1. Branch Naming Convention
+    Gumamit ng malinaw at descriptive na pangalan ng branch.
+    
+    Format:
+    
+    <type>/<short-description>
+    Mga Branch Type
+    Type	Gamit	Halimbawa
+    feature/	Bagong feature	feature/user-login
+    bugfix/	Pag-aayos ng bug	bugfix/login-error
+    hotfix/	Urgent fix sa production	hotfix/security-patch
+    release/	Paghahanda ng release	release/v1.2.0
+    docs/	Documentation updates	docs/api-guide
+    refactor/	Code refactoring	refactor/auth-service
+    test/	Test cases	test/payment-module
+    chore/	Maintenance tasks	chore/update-dependencies
+    Rules
+    Gumamit ng lowercase letters lamang.
+    Gumamit ng hyphen (-) bilang separator.
+    Iwasan ang spaces at special characters.
+    Gawing maikli ngunit malinaw ang pangalan.
+    
+    Good
+    
+    feature/profile-page
+    bugfix/login-validation
+    docs/user-manual
+    
+    Bad
+    
+    New Feature
+    Feature1
+    LoginFix
+    mybranch
+----------------------------------------------------------------------------------
+  
+2. Commit Message Convention
+    Maglagay ng malinaw na commit message.
+    
+    Format
+    
+    type: short description
+    Examples
+    feat: add login functionality
+    fix: resolve password validation issue
+    docs: update installation guide
+    refactor: simplify authentication service
+    test: add unit tests for user module
+    chore: update dependencies
+    
+    Iwasan ang:
+    
+    update
+    fix
+    changes
+    asdf
+    final
+----------------------------------------------------------------------------------
+  
+3. Isang Feature Kada Branch
+    ✔️ Gumawa ng hiwalay na branch para sa bawat feature o bug.
+    
+    Good
+    
+    feature/user-login
+    feature/profile-page
+    bugfix/login-error
+    
+    Bad
+    
+    feature/all-features
+----------------------------------------------------------------------------------
+  
+4. Pull Before Starting Work
+    Laging kunin ang latest changes bago magsimula.
+    
+    git checkout main
+    git pull origin main
+    
+    Pagkatapos ay gumawa ng bagong branch.
+----------------------------------------------------------------------------------
+  
+5. Huwag Mag-commit Diretso sa Main
+    ✔️ Gumamit lagi ng feature branch.
+    
+    Allowed
+    
+    main
+       │
+    feature/login
+    feature/dashboard
+    bugfix/api-error
+    
+    Not Allowed
+    
+    Direct commit → main
+----------------------------------------------------------------------------------
+  
+6. Push Regularly
+    Mag-push ng progress lalo na pagkatapos ng isang kumpletong task.
+    
+    git push origin feature/login
+----------------------------------------------------------------------------------
+  
+7. Gumawa ng Pull Request
+    Bago i-merge sa main, gumawa muna ng Pull Request.
+    
+    Checklist:
+    
+    Code is working
+    No merge conflicts
+    Passed testing
+    Reviewed (kung required)
+----------------------------------------------------------------------------------
+  
+8. Resolve Merge Conflicts Carefully
+    Kapag may conflict:
+    
+    Basahin ang conflict.
+    Piliin ang tamang code.
+    I-test ang application.
+    Commit ang resolved changes.
+    
+    Huwag basta-basta tanggalin ang code nang hindi nauunawaan ang conflict.
+----------------------------------------------------------------------------------
+  
+9. Delete Old Branches
+    Kapag merged na ang branch:
+    
+    Local
+    
+    git branch -d feature/login
+    
+    Remote
+    
+    git push origin --delete feature/login
+----------------------------------------------------------------------------------
+  
+10. Huwag Mag-commit ng Sensitive Files
+    Huwag i-commit ang:
+    
+    Passwords
+    API Keys
+    Tokens
+    .env
+    Secret configuration files
+    
+    Gamitin ang .gitignore.
+----------------------------------------------------------------------------------
+  
+11. Panatilihing Maliit ang Commits
+    Mas madaling i-review ang maliliit na commits.
+    
+    ✔️ Good
+    
+    feat: add user registration form
+    
+    ❌ Bad
+    
+    feat: entire system update
+----------------------------------------------------------------------------------
+  
+12. Mag-test Bago Mag-push
+    Bago mag-push, siguraduhing:
+    
+    Walang errors
+    Successful ang build
+    Passed ang tests (kung mayroon)
+----------------------------------------------------------------------------------
+  
+Sample Workflow
+1. Pull latest changes
+        │
+        ▼
+2. Create Branch
+        │
+        ▼
+3. Develop Feature
+        │
+        ▼
+4. git status
+        │
+        ▼
+5. git add
+        │
+        ▼
+6. git commit
+        │
+        ▼
+7. git push
+        │
+        ▼
+8. Create Pull Request
+        │
+        ▼
+9. Code Review
+        │
+        ▼
+10. Resolve Conflicts (kung mayroon)
+        │
+        ▼
+11. Merge Pull Request
+        │
+        ▼
+12. Delete Branch
+----------------------------------------------------------------------------------
+  
+Best Practices
+    Gumamit ng malinaw na branch names.
+    Gumawa ng descriptive commit messages.
+    Huwag mag-commit diretso sa main.
+    Isang feature o bug fix kada branch.
+    Mag-pull muna bago magsimula.
+    Mag-test bago mag-push.
+    Gumawa ng Pull Request para sa lahat ng changes.
+    Burahin ang branch kapag merged na.
+    Huwag mag-commit ng passwords, API keys, o iba pang sensitibong impormasyon.
+    Panatilihing maliit at madalas ang commits para mas madaling i-review at i-troubleshoot.
+    
+    Ang mga gabay na ito ay nagbibigay ng maayos at pare-parehong workflow na madaling sundan ng buong team.
