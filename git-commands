@@ -1,0 +1,77 @@
+Basic Commands
+	command: git init 	description: Gumagawa ng bagong Git repository sa current folder.
+	
+	command: git clone <repository-url> 	description: Kinokopya ang existing repository mula sa remote source (GitHub, GitLab, atbp.) papunta sa local machine.
+
+	command: git status 	description: Ipinapakita ang kasalukuyang estado ng repository, kabilang ang modified, staged, at untracked files.
+
+	command: git add <file> 	description: Nagdadagdag ng specific file sa staging area para maisama sa susunod na commit.
+
+	command: git add . 	description: Nagdadagdag ng lahat ng pagbabago sa current directory sa staging area.
+
+	command: git commit -m "message" 	description: Gumagawa ng commit na nagse-save ng staged changes kasama ang commit message.
+
+	command: git log 	description: Ipinapakita ang commit history ng repository.
+
+	command: git log --oneline 	description: Ipinapakita ang commit history sa mas maikling format.
+
+Branch Commands
+	command: git branch 	description: Ipinapakita ang listahan ng lahat ng local branches.
+
+	command: git branch <branch-name> 	description: Gumagawa ng bagong branch.
+
+	command: git checkout <branch-name> 	description: Lumilipat sa ibang branch.
+
+	command: git checkout -b <branch-name> 	description: Gumagawa ng bagong branch at agad na lumilipat dito.
+
+	command: git switch <branch-name> 	description: Modern na paraan para lumipat sa ibang branch.
+
+	command: git switch -c <branch-name> 	description: Gumagawa ng bagong branch at lumilipat dito.
+
+	command: git merge <branch-name> 	description: Pinagsasama ang changes mula sa specified branch papunta sa current branch.
+
+	command: git branch -d <branch-name> 	description: Binubura ang branch kapag merged na ito.
+
+Remote Repository Commands
+	command: git remote -v 	description: Ipinapakita ang mga configured remote repositories.
+
+	command: git remote add origin <repository-url> 	description: Nagdadagdag ng remote repository na may pangalang origin.
+
+	command: git push origin <branch-name> 	description: Ina-upload ang local commits papunta sa remote repository.
+
+	command: git push -u origin <branch-name> 	description: Nagpu-push at sine-set ang upstream branch para hindi na kailangan ulitin ang remote at branch name sa susunod.
+
+	command: git pull 	description: Kumukuha at nagme-merge ng latest changes mula sa remote repository.
+
+	command: git fetch 	description: Kumukuha ng latest changes mula sa remote repository nang hindi pa ito mina-merge.
+
+Undo Commands
+	command: git restore <file> 	description: Ibinabalik ang file sa huling committed version.
+
+	command: git restore --staged <file> 	description: Inaalis ang file sa staging area nang hindi binubura ang changes.
+
+	command: git reset --soft HEAD~1 	description: Inaalis ang huling commit ngunit pinapanatili ang changes sa staging area.
+
+	command: git reset --hard HEAD~1 	description: Binubura ang huling commit kasama ang lahat ng associated changes.
+	⚠️ Gamitin nang maingat dahil hindi madaling ma-recover ang changes.
+
+	command: git revert <commit-hash> 	description: Gumagawa ng bagong commit na nag-uundo sa changes ng isang specific commit.
+
+Inspection Commands
+	command: git diff 	description: Ipinapakita ang pagkakaiba ng working directory at staged files.
+
+	command: git diff --staged 	description: Ipinapakita ang pagkakaiba ng staged files at huling commit.
+
+	command: git show <commit-hash> 	description: Ipinapakita ang detalye ng isang commit.
+
+Useful Everyday Commands
+	command: git stash 	description: Pansamantalang sine-save ang uncommitted changes para makapagpalit ng branch o gumawa ng ibang task.
+
+	command: git stash pop 	description: Ibinabalik ang huling naka-stash na changes.
+
+	command: git cherry-pick <commit-hash> 	description: Kinokopya ang isang specific commit mula sa ibang branch papunta sa current branch.
+
+	command: git tag <tag-name> 	description: Gumagawa ng tag para markahan ang isang release o importanteng commit.
+
+	command: git clean -fd 	description: Binubura ang mga untracked files at directories.
+	⚠️ Hindi ito madaling ma-recover kaya siguraduhing tama ang target bago gamitin.
