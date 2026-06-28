@@ -21,7 +21,8 @@ description: Repository na naka-host sa server tulad ng GitHub, GitLab, o Bitbuc
 term: Commit 
 description: Isang snapshot ng project sa isang partikular na oras. Ito ang paraan ni Git para i-save ang history ng changes.
 
-term: Commit Hash description: Unique identifier ng isang commit. Halimbawa:
+term: Commit Hash 
+description: Unique identifier ng isang commit. Halimbawa:
 
 a1b2c3d4
 
