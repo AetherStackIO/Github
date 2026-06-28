@@ -1,0 +1,214 @@
+Step 1: Kunin ang Latest Changes
+  Bago magtrabaho, siguraduhing updated ang local repository.
+  
+  git pull
+----------------------------------------------------------------------------------
+  
+Step 2: Gumawa ng Feature Branch
+  Karaniwan hindi direktang nagco-commit sa main.
+  
+  git checkout -b feature/login-page
+  
+  Explanation:
+  
+  checkout -b = create at lumipat sa bagong branch.
+  Good practice na bawat task ay may sariling branch.
+  
+  Verify:
+  
+  git branch
+  
+  Output:
+  
+  * feature/login-page
+    main
+----------------------------------------------------------------------------------
+  
+Step 3: Gumawa ng Changes
+  Halimbawa:
+  
+  code .
+  
+  Mag-edit ng files sa project.
+----------------------------------------------------------------------------------
+  
+Step 4: Tingnan ang Nabagong Files
+  git status
+  
+  Example:
+  
+  modified: src/Login.tsx
+  modified: src/App.tsx
+----------------------------------------------------------------------------------
+  
+Step 5: I-Stage ang Files
+  Specific file:
+  
+  git add src/Login.tsx
+  
+  Lahat ng changes:
+  
+  git add .
+  
+  Verify:
+  
+  git status
+  
+  Output:
+  
+  Changes to be committed:
+  
+  Ibig sabihin nasa staging area na.
+----------------------------------------------------------------------------------
+  
+Step 6: Gumawa ng Commit
+  git commit -m "Add login page"
+  
+  Good commit messages:
+  
+  git commit -m "Fix navbar alignment"
+  git commit -m "Add user authentication"
+  git commit -m "Update dashboard layout"
+----------------------------------------------------------------------------------
+  
+Step 7: I-Push ang Branch sa GitHub
+  First push ng branch:
+  
+  git push -u origin feature/login-page
+  
+  Explanation:
+  
+  origin = remote repository
+  feature/login-page = branch name
+  -u = itinatakda ang upstream para sa future pushes
+  
+  Sa susunod:
+  
+  git push
+  
+  lang sapat na.
+----------------------------------------------------------------------------------
+  
+Step 8: Gumawa ng Pull Request
+  Pagkatapos ng successful push:
+  
+  Pumunta sa GitHub repository.
+  Makakakita ng banner:
+  feature/login-page had recent pushes
+  Compare & Pull Request
+  Click Compare & Pull Request.
+  Lagyan ng title.
+  
+  Example:
+  
+  Add login page
+  Lagyan ng description.
+  
+  Example:
+  
+  ## Changes
+  - Added login form
+  - Added validation
+  - Added API integration
+  
+  ## Testing
+  - Tested successful login
+  - Tested invalid credentials
+  Click Create Pull Request.
+----------------------------------------------------------------------------------
+  
+Step 9: Code Review
+  Kapag may reviewer:
+  
+  Maaaring:
+  
+  Approve
+  Request changes
+  Mag-comment
+  
+  Kung may requested changes:
+  
+  # edit files
+  
+  git add .
+  git commit -m "Address review comments"
+  git push
+  
+  Automatic na maa-update ang existing PR.
+----------------------------------------------------------------------------------
+  
+Step 10: Merge Pull Request
+  Kapag approved:
+  
+  Click Merge Pull Request
+  Click Confirm Merge
+  
+  Magsasama na ang branch mo sa main.
+----------------------------------------------------------------------------------
+  
+Step 11: Update Local Main Branch
+  Pagkatapos ma-merge:
+  
+  git checkout main
+  git pull
+  
+  Makukuha mo ang latest merged changes.
+  
+  Complete Developer Workflow
+  # Clone repository
+  git clone <repo-url>
+  
+  # Enter repository
+  cd project-name
+  
+  # Update local repository
+  git pull
+  
+  # Create feature branch
+  git checkout -b feature/login-page
+  
+  # Make changes
+  
+  # Check changes
+  git status
+  
+  # Stage changes
+  git add .
+  
+  # Commit
+  git commit -m "Add login page"
+  
+  # Push branch
+  git push -u origin feature/login-page
+  
+  # Create Pull Request on GitHub
+  
+  # After merge
+  git checkout main
+  git pull
+----------------------------------------------------------------------------------
+  
+Git Flow Summary
+Clone Repository
+       ↓
+Create Branch
+       ↓
+Edit Files
+       ↓
+git status
+       ↓
+git add .
+       ↓
+git commit -m "message"
+       ↓
+git push
+       ↓
+Create Pull Request
+       ↓
+Code Review
+       ↓
+Merge
+       ↓
+git pull main
+
+Ito ang workflow na ginagamit ng karamihan sa professional development teams gamit ang GitHub, GitLab, o Bitbucket.
